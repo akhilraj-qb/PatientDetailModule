@@ -25,21 +25,21 @@ import PatientDetailModule
 
 Add module
 ```
-	let moduleConnector = ModuleConnector()
+let moduleConnector = ModuleConnector()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        moduleConnector.mount(module: DetailModule())
-    }
+override func viewDidLoad() {
+    super.viewDidLoad()
+    moduleConnector.mount(module: DetailModule())
+}
 ```
 
 Module accessing
 ```
 guard let url = URL(string: "PatientDetail://patientDetailVC?patientID=1234") ,
-            let viewController = moduleConnector.get(url: url) as? UIViewController
-            else { return }
+      let viewController = moduleConnector.get(url: url) as? UIViewController
+      else { return }
         
-        navigationController?.pushViewController(viewController, animated: true)
+navigationController?.pushViewController(viewController, animated: true)
 ```
 
 ## License
