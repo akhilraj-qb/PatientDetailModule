@@ -24,7 +24,8 @@ import PatientDetailModule
 ```
 
 Add module
-```
+
+```swift
 let moduleConnector = ModuleConnector()
     
 override func viewDidLoad() {
@@ -34,7 +35,8 @@ override func viewDidLoad() {
 ```
 
 Module accessing
-```
+
+```swift
 guard let url = URL(string: "PatientDetail://patientDetailVC?patientID=1234") ,
       let viewController = moduleConnector.get(url: url) as? UIViewController
       else { return }
