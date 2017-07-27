@@ -1,0 +1,20 @@
+PODS:
+  - AppModules (0.1.3)
+  - PatientDetailModule (0.0.1):
+    - AppModules
+
+DEPENDENCIES:
+  - AppModules
+  - PatientDetailModule (from `./`)
+
+EXTERNAL SOURCES:
+  PatientDetailModule:
+    :path: ./
+
+SPEC CHECKSUMS:
+  AppModules: 9b35f364da724a873fa1995489d64f792cddc6c1
+  PatientDetailModule: 15d8ddb6657de4a4d67a7282873ddaffba3e7101
+
+PODFILE CHECKSUM: 6d6799ebc068e5b9bbcb045d1c2ecf91e89953dc
+
+COCOAPODS: 1.2.1

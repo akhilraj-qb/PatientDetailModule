@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8RO-NQ-rOm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0yT-tb-fF7">
+            <objects>
+                <navigationController storyboardIdentifier="rootNavController" id="8RO-NQ-rOm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DFJ-hc-1MO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gbG-gs-dAB" kind="relationship" relationship="rootViewController" id="uQG-nF-x8F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9d-1f-7yw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1229" y="42"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KoN-x9-UIi">
+            <objects>
+                <viewController id="gbG-gs-dAB" customClass="ViewController" customModule="PatientDetail" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AHJ-zy-7F0"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Uy-b7-X09"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0QC-ia-663">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Z5523433" borderStyle="roundedRect" placeholder="Enter patiend ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4F-tb-HEv">
+                                <rect key="frame" x="81" y="101" width="213" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="213" id="0rh-G1-DBr"/>
+                                    <constraint firstAttribute="height" constant="30" id="geh-Vw-MQc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wqx-Z0-Cpg">
+                                <rect key="frame" x="129" y="175" width="116" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="GcS-gp-bn2"/>
+                                    <constraint firstAttribute="height" constant="30" id="csY-gt-cDO"/>
+                                </constraints>
+                                <state key="normal" title="Get Details"/>
+                                <connections>
+                                    <action selector="showDetails:" destination="gbG-gs-dAB" eventType="touchUpInside" id="2Xq-kl-34A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C4F-tb-HEv" firstAttribute="centerX" secondItem="0QC-ia-663" secondAttribute="centerX" id="0hU-43-lsp"/>
+                            <constraint firstItem="C4F-tb-HEv" firstAttribute="top" secondItem="AHJ-zy-7F0" secondAttribute="bottom" constant="37" id="eMc-ym-KlE"/>
+                            <constraint firstItem="Wqx-Z0-Cpg" firstAttribute="top" secondItem="C4F-tb-HEv" secondAttribute="bottom" constant="44" id="ePW-iA-MkH"/>
+                            <constraint firstItem="Wqx-Z0-Cpg" firstAttribute="centerX" secondItem="0QC-ia-663" secondAttribute="centerX" id="w3M-Z4-sVT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8eN-kA-jPu"/>
+                    <connections>
+                        <outlet property="patientIdField" destination="C4F-tb-HEv" id="deP-Fh-VDR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WtP-Rj-Fbh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-335.19999999999999" y="41.829085457271368"/>
+        </scene>
+    </scenes>
+</document>
